@@ -81,14 +81,13 @@ const MovinoI18n = (() => {
       guide_step3_title: '۳. لمس Install anyway و لذت از فیلم‌ها!',
       guide_step3_desc: 'دکمه Install anyway (نصب در هر صورت) را لمس کنید تا برنامه در چند ثانیه نصب و فعال شود.',
 
-      accordion_arch_title: 'سایر پردازنده‌ها و بسته‌های تخصصی (پیشرفته)',
+      accordion_arch_title: 'سایر معماری‌های اندروید (پیشرفته)',
       th_file: 'نام پکیج',
       th_arch: 'معماری پردازنده',
       th_use: 'کاربرد',
       th_dl: 'دانلود',
       arm64_desc: 'گوشی‌های مدرن و جدید',
       armv7_desc: 'گوشی‌ها و تبلت‌های قدیمی‌تر',
-      aab_desc: 'بسته انتشار مخصوص گوگل‌پلی و استورها',
       chk_desc: 'کدهای اعتبارسنجی سلامت فایل‌ها',
 
       features_title: 'چرا اپلیکیشن مووینو؟',
@@ -204,14 +203,13 @@ const MovinoI18n = (() => {
       guide_step3_title: "3. Tap 'Install anyway' & Stream!",
       guide_step3_desc: "Select 'Install anyway' to complete setup in seconds and start enjoying movies.",
 
-      accordion_arch_title: 'Specific Architectures & Store Bundles (Advanced)',
+      accordion_arch_title: 'Other Android Architectures (Advanced)',
       th_file: 'Package Name',
       th_arch: 'Architecture',
       th_use: 'Intended For',
       th_dl: 'Download',
       arm64_desc: 'Modern 64-bit devices',
       armv7_desc: 'Legacy 32-bit devices',
-      aab_desc: 'Google Play Store bundle',
       chk_desc: 'Cryptographic SHA-256 checksums',
 
       features_title: 'Why Choose Movino?',
@@ -327,14 +325,13 @@ const MovinoI18n = (() => {
       guide_step3_title: "3. الضغط على 'التثبيت على أي حال' والاستمتاع!",
       guide_step3_desc: "اضغط على 'التثبيت على أي حال' ليكتمل التثبيت وتبدأ المشاهدة فوراً.",
 
-      accordion_arch_title: 'المعالجات الخاصة وحزم المتاجر (متقدم)',
+      accordion_arch_title: 'معماريات أندرويد الأخرى (متقدم)',
       th_file: 'اسم الحزمة',
       th_arch: 'معمارية المعالج',
       th_use: 'الاستخدام',
       th_dl: 'تحميل',
       arm64_desc: 'الأجهزة الحديثة 64-بت',
       armv7_desc: 'الأجهزة القديمة 32-بت',
-      aab_desc: 'حزمة متجر جوجل بلاي',
       chk_desc: 'رموز التحقق الرقمية SHA-256',
 
       features_title: 'لماذا تختار موفينو؟',

@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
           windows: /\.(exe|msi|zip)$/i,
           appimage: /\.AppImage$/i,
           deb: /\.deb$/i,
-          aab: /\.aab$/i,
           checksums: /(checksums|sha256)\.txt$/i
         };
 
