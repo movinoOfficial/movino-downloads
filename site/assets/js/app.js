@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Constants & State
-  const REPO = 'Movino/movino-downloads';
+  const REPO = 'movinoOfficial/movino-downloads';
   const FALLBACK_RELEASE_PAGE = `https://github.com/${REPO}/releases/latest`;
   const TELEGRAM_CHANNEL = 'https://t.me/MovinoOfficial';
   const TELEGRAM_BOT = 'https://t.me/MovinoBot';
@@ -144,7 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         latestAssets = {};
         for (const [key, regex] of Object.entries(rules)) {
-          const match = assets.find(a => regex.test(a.name));
+          const matches = assets.filter(a => regex.test(a.name));
+          const match = key === 'windows'
+            ? (matches.find(a => /setup.*\.exe$/i.test(a.name)) ||
+              matches.find(a => /\.exe$/i.test(a.name)) || matches[0])
+            : matches[0];
           if (match) {
             latestAssets[key] = {
               name: match.name,
@@ -269,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!copyTvBtn) return;
 
     copyTvBtn.addEventListener('click', () => {
-      const tvUrl = latestAssets.tv ? latestAssets.tv.url : 'https://github.com/Movino/movino-downloads/releases/latest';
+      const tvUrl = latestAssets.tv ? latestAssets.tv.url : 'https://github.com/movinoOfficial/movino-downloads/releases/latest';
       
       const copyAction = () => {
         const originalText = copyTvBtn.innerHTML;

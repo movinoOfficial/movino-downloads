@@ -2,7 +2,7 @@
 
 صفحهٔ رسمی معرفی و دریافت خروجی‌های Movino. این مخزن فقط فایل‌های سایت، راهنماها و توضیحات نسخه‌ها را نگه می‌دارد؛ سورس اپ و پنل در آن قرار نمی‌گیرد.
 
-- دریافت نسخه‌ها: [Releases](https://github.com/Movino/movino-downloads/releases)
+- دریافت نسخه‌ها: [Releases](https://github.com/movinoOfficial/movino-downloads/releases)
 - صفحهٔ دانلود: پس از فعال‌سازی GitHub Pages در تنظیمات مخزن در دسترس خواهد بود.
 - فایل‌های APK، AAB و بسته‌های دسکتاپ باید به‌عنوان دارایی Release بارگذاری شوند، نه در تاریخچهٔ Git.
 
