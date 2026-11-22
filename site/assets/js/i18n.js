@@ -17,7 +17,7 @@ const MovinoI18n = (() => {
       changelog_empty: 'توضیحات خاصی برای این ریلیز در گیت‌هاب ثبت نشده است.',
       changelog_close: 'بستن',
 
-      hero_title_1: 'سینما در دستان تو،',
+      hero_title_1: 'مووینو؛ سینما در دستان تو،',
       hero_title_2: 'در هر زمان و هر دستگاه',
       hero_desc: 'دریافت مستقیم و پرسرعت اپلیکیشن مووینو برای تمام گوشی‌ها، تلویزیون‌های هوشمند، تبلت و کامپیوتر بدون نیاز به فیلترشکن و با ترافیک نیم‌بها.',
       
@@ -139,7 +139,7 @@ const MovinoI18n = (() => {
       changelog_empty: 'No detailed changelog provided for this release.',
       changelog_close: 'Close',
 
-      hero_title_1: 'Cinema in Your Hands,',
+      hero_title_1: 'Movino — Cinema in Your Hands,',
       hero_title_2: 'Anytime, on Any Device',
       hero_desc: 'Direct high-speed download of Movino app for all smartphones, smart TVs, tablets, and PCs without restrictions.',
       
@@ -261,7 +261,7 @@ const MovinoI18n = (() => {
       changelog_empty: 'لا توجد ملاحظات مفصلة لهذا الإصدار.',
       changelog_close: 'إغلاق',
 
-      hero_title_1: 'السينما بين يديك،',
+      hero_title_1: 'موفينو؛ السينما بين يديك،',
       hero_title_2: 'في أي وقت وعلى أي جهاز',
       hero_desc: 'تحميل مباشر وسريع لتطبيق موفينو لجميع الهواتف، أجهزة التلفزيون الذكية، الأجهزة اللوحية والحواسيب بدون تعقيدات وبأعلى سرعة.',
       

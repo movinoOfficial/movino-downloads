@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://movinoofficial.github.io/movino-downloads/sitemap.xml

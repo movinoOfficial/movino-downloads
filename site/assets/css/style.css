@@ -55,8 +55,40 @@ body {
   overflow-x: hidden;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 24% 38%, rgba(0, 229, 255, 0.09), transparent 24%),
+    radial-gradient(ellipse at 74% 58%, rgba(255, 0, 127, 0.08), transparent 26%);
+  filter: blur(18px);
+  animation: ambientDrift 24s ease-in-out infinite alternate;
+}
+
+@keyframes ambientDrift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to { transform: translate3d(1.5%, 1%, 0) scale(1.05); }
+}
+
+html.motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 620ms ease, transform 620ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--reveal-order, 0) * 55ms);
+}
+
+html.motion-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Container */
 .container {
+  position: relative;
+  z-index: 1;
   width: min(1060px, calc(100% - 32px));
   margin: 0 auto;
   padding: 24px 0 60px;
@@ -244,8 +276,15 @@ body {
 
 .hero h1 span.gradient-text {
   background: linear-gradient(135deg, #00e5ff 0%, #ff007f 70%, #a855f7 100%);
+  background-size: 180% 180%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientFlow {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
 }
 
 .hero-subtitle {
@@ -1154,5 +1193,14 @@ body {
   }
   .rec-title {
     font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -11,6 +11,26 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Reveal content as it enters view; leave everything visible if motion is reduced
+  // or IntersectionObserver is unavailable (older TV browsers).
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('motion-ready');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach((element, index) => {
+      element.style.setProperty('--reveal-order', String(index % 5));
+      revealObserver.observe(element);
+    });
+  }
+
   // 1. Initialize Localization
   if (typeof MovinoI18n !== 'undefined') {
     MovinoI18n.init();

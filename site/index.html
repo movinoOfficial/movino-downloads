@@ -4,15 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#060813">
-  <meta name="description" content="دانلود رسمی آخرین نسخه اپلیکیشن مووینو برای اندروید، تلویزیون هوشمند، ویندوز و لینوکس با ترافیک نیم‌بها و بدون فیلترشکن.">
-  <meta property="og:title" content="دانلود اپلیکیشن مووینو | سینما در دستان تو">
-  <meta property="og:description" content="مرجع رسمی دانلود نسخه‌های پایدار اپلیکیشن مووینو برای موبایل، تلویزیون هوشمند، ویندوز و وب.">
-  <meta property="og:image" content="assets/movino-icon.png">
+  <meta name="author" content="Movino">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="صفحه رسمی دانلود مووینو؛ نسخه‌های اندروید موبایل و تلویزیون، ویندوز و لینوکس، همراه با راهنمای نصب و فایل‌های انتشار.">
+  <link rel="canonical" href="https://movinoofficial.github.io/movino-downloads/">
+  <meta property="og:site_name" content="مووینو | Movino">
+  <meta property="og:title" content="مووینو | دانلود رسمی اپلیکیشن فیلم و سریال">
+  <meta property="og:description" content="دانلود رسمی مووینو برای موبایل اندروید، Android TV، ویندوز و لینوکس؛ نسخه‌ها و راهنمای نصب را ببینید.">
+  <meta property="og:url" content="https://movinoofficial.github.io/movino-downloads/">
+  <meta property="og:image" content="https://movinoofficial.github.io/movino-downloads/assets/movino-icon.png">
+  <meta property="og:image:alt" content="نشان مووینو">
   <meta property="og:type" content="website">
-  <title>دانلود اپلیکیشن مووینو | Movino Downloads Portal</title>
+  <meta property="og:locale" content="fa_IR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="مووینو | دانلود رسمی اپلیکیشن فیلم و سریال">
+  <meta name="twitter:description" content="نسخه‌های رسمی مووینو برای موبایل، تلویزیون، ویندوز و لینوکس.">
+  <meta name="twitter:image" content="https://movinoofficial.github.io/movino-downloads/assets/movino-icon.png">
+  <title>مووینو | دانلود رسمی اپلیکیشن فیلم و سریال برای موبایل، تلویزیون و دسکتاپ</title>
 
   <link rel="icon" type="image/png" href="assets/movino-icon.png">
+  <link rel="sitemap" type="application/xml" href="https://movinoofficial.github.io/movino-downloads/sitemap.xml">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://movinoofficial.github.io/movino-downloads/#organization",
+        "name": "مووینو | Movino",
+        "url": "https://movinoofficial.github.io/movino-downloads/",
+        "logo": "https://movinoofficial.github.io/movino-downloads/assets/movino-icon.png",
+        "sameAs": ["https://t.me/MovinoOfficial", "https://github.com/movinoOfficial"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://movinoofficial.github.io/movino-downloads/#website",
+        "name": "مووینو | Movino",
+        "alternateName": "Movino Official Downloads",
+        "url": "https://movinoofficial.github.io/movino-downloads/",
+        "inLanguage": "fa-IR",
+        "publisher": {"@id": "https://movinoofficial.github.io/movino-downloads/#organization"}
+      }
+    ]
+  }
+  </script>
 
   <!-- Modular Scripts -->
   <script defer src="assets/js/i18n.js"></script>
@@ -55,7 +92,7 @@
 
     <!-- Hero Section -->
     <main>
-      <section class="hero">
+      <section class="hero" data-reveal="hero">
         <div class="hero-meta-row">
           <div class="version-pill">
             <span class="pulse-dot"></span>
@@ -97,13 +134,13 @@
       </section>
 
       <!-- Platforms Grid -->
-      <section>
+      <section data-reveal>
         <h2 class="section-title" data-i18n="grid_title">انتخاب بر اساس پلتفرم</h2>
         <p class="section-desc" data-i18n="grid_desc">نسخهٔ متناسب با سیستم‌عامل دستگاهت رو انتخاب کن:</p>
 
         <div class="platform-grid">
           <!-- Android Phone -->
-          <article class="platform-card" data-platform="android">
+          <article class="platform-card" data-platform="android" data-reveal>
             <div>
               <div class="card-top">
                 <div class="platform-icon icon-android">📱</div>
@@ -128,7 +165,7 @@
           </article>
 
           <!-- Android TV -->
-          <article class="platform-card" data-platform="tv">
+          <article class="platform-card" data-platform="tv" data-reveal>
             <div>
               <div class="card-top">
                 <div class="platform-icon icon-tv">📺</div>
@@ -157,7 +194,7 @@
           </article>
 
           <!-- Windows Desktop -->
-          <article class="platform-card" data-platform="windows">
+          <article class="platform-card" data-platform="windows" data-reveal>
             <div>
               <div class="card-top">
                 <div class="platform-icon icon-windows">💻</div>
@@ -182,7 +219,7 @@
           </article>
 
           <!-- Web App / iOS -->
-          <article class="platform-card" data-platform="web">
+          <article class="platform-card" data-platform="web" data-reveal>
             <div>
               <div class="card-top">
                 <div class="platform-icon icon-web">🌐</div>
@@ -207,7 +244,7 @@
           </article>
 
           <!-- Linux Desktop -->
-          <article class="platform-card" data-platform="linux">
+          <article class="platform-card" data-platform="linux" data-reveal>
             <div>
               <div class="card-top">
                 <div class="platform-icon icon-linux">🐧</div>
@@ -234,12 +271,12 @@
       </section>
 
       <!-- UI Showcase Section -->
-      <section class="showcase-section">
+      <section class="showcase-section" data-reveal>
         <h2 class="section-title" data-i18n="showcase_title">نمای محیط اپلیکیشن در تلویزیون و موبایل</h2>
         <p class="section-desc" data-i18n="showcase_desc">طراحی اختصاصی شبانه، رابط کاربری روان و بهینه‌سازی‌شده برای انواع صفحه‌نمایش‌ها</p>
 
         <!-- TV Showcase Featured Card -->
-        <div class="showcase-tv-card">
+        <div class="showcase-tv-card" data-reveal>
           <div class="showcase-tv-media">
             <img src="assets/images/tv-showcase.webp" alt="محیط اختصاصی تلویزیون هوشمند مووینو" loading="lazy">
           </div>
@@ -252,7 +289,7 @@
 
         <!-- Mobile Showcase 2-Card Row -->
         <div class="showcase-mobile-grid">
-          <div class="showcase-mobile-card">
+          <div class="showcase-mobile-card" data-reveal>
             <div class="phone-mockup-frame">
               <img src="assets/images/mobile-home.webp" alt="صفحه اصلی اپلیکیشن موبایل مووینو" loading="lazy">
             </div>
@@ -263,7 +300,7 @@
             </div>
           </div>
 
-          <div class="showcase-mobile-card">
+          <div class="showcase-mobile-card" data-reveal>
             <div class="phone-mockup-frame">
               <img src="assets/images/mobile-details.webp" alt="صفحه اختصاصی فیلم و پخش در موبایل" loading="lazy">
             </div>
@@ -277,7 +314,7 @@
       </section>
 
       <!-- 3-Step Installation Guide -->
-      <section class="install-guide-section">
+      <section class="install-guide-section" data-reveal>
         <h2 class="section-title" data-i18n="guide_title">راهنمای ۳ مرحله‌ای نصب فایل APK</h2>
         <p class="section-desc" data-i18n="guide_desc">نصب آسان و بدون ابهام روی تمامی گوشی‌ها و تبلت‌های اندرویدی:</p>
 
@@ -303,7 +340,7 @@
       </section>
 
       <!-- Advanced Architectures Accordion -->
-      <section class="accordion-section" id="advanced-architectures">
+      <section class="accordion-section" id="advanced-architectures" data-reveal>
         <button type="button" class="accordion-trigger" id="accordion-arch-trigger" aria-expanded="false" aria-controls="accordion-arch-content">
           <span data-i18n="accordion_arch_title">سایر پردازنده‌ها و بسته‌های تخصصی (پیشرفته)</span>
           <span class="trigger-icon">▼</span>
@@ -343,7 +380,7 @@
       </section>
 
       <!-- Features Highlights -->
-      <section>
+      <section data-reveal>
         <h2 class="section-title" data-i18n="features_title">چرا اپلیکیشن مووینو؟</h2>
         <div class="features-grid">
           <div class="feature-box">
@@ -370,7 +407,7 @@
       </section>
 
       <!-- QR Code for Mobile Scanning (Visible on Desktop) -->
-      <section class="qr-container-card" id="qr-card">
+      <section class="qr-container-card" id="qr-card" data-reveal>
         <div class="qr-info">
           <h3 data-i18n="qr_title">دانلود مستقیم روی گوشی از طریق اسکن QR</h3>
           <p data-i18n="qr_desc">
@@ -383,7 +420,7 @@
       </section>
 
       <!-- FAQs -->
-      <section class="faq-wrap">
+      <section class="faq-wrap" data-reveal>
         <h2 class="section-title" data-i18n="faq_title">سوالات متداول کاربران</h2>
 
         <div class="faq-item">
@@ -428,7 +465,7 @@
       </section>
 
       <!-- Telegram Community Banner -->
-      <section class="telegram-banner">
+      <section class="telegram-banner" data-reveal>
         <h3 data-i18n="tg_banner_title">به خانواده بزرگ مووینو در تلگرام بپیوندید</h3>
         <p data-i18n="tg_banner_desc">
           اطلاع از پخش فیلم‌ها و قسمت‌های جدید سریال‌ها، دریافت لینک‌های مستقیم در ربات و ارتباط با پشتیبانی ۲۴ ساعته.
