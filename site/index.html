@@ -3,92 +3,479 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10111b">
-  <meta name="description" content="دریافت نسخه‌های رسمی اپلیکیشن مووینو برای اندروید، تلویزیون و لینوکس">
-  <title>دانلود مووینو</title>
-  <style>
-    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #10111b; color: #f7f5fc; }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% -15%, #3b1742 0, transparent 48%), #10111b; }
-    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 56px 0 40px; }
-    header { text-align: center; margin-bottom: 42px; }
-    header img { width: 76px; height: 76px; border-radius: 22px; }
-    h1 { margin: 16px 0 8px; font-size: clamp(2rem, 7vw, 3.5rem); }
-    .intro { color: #bbb7c9; margin: 0 auto; max-width: 580px; line-height: 1.9; }
-    .version { display: inline-block; margin-top: 16px; padding: 6px 12px; border: 1px solid #5e3157; border-radius: 999px; color: #ff65be; font-size: .9rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    section { border: 1px solid #33263b; border-radius: 20px; padding: 22px; background: #171824; }
-    h2 { font-size: 1.2rem; margin: 0 0 8px; }
-    section p { color: #aaa8b7; line-height: 1.8; min-height: 54px; margin: 0 0 18px; font-size: .92rem; }
-    a.button { display: block; text-decoration: none; text-align: center; border-radius: 12px; padding: 12px 16px; background: #f51b8b; color: #160b17; font-weight: 750; }
-    a.button.secondary { background: #252637; border: 1px solid #48455a; color: #f7f5fc; }
-    .note { margin-top: 24px; color: #aaa8b7; text-align: center; line-height: 1.9; font-size: .9rem; }
-    footer { margin-top: 38px; text-align: center; color: #888597; font-size: .85rem; }
-    footer a { color: #58dced; }
-  </style>
+  <meta name="theme-color" content="#060813">
+  <meta name="description" content="دانلود رسمی آخرین نسخه اپلیکیشن مووینو برای اندروید، تلویزیون هوشمند، ویندوز و لینوکس با ترافیک نیم‌بها و بدون فیلترشکن.">
+  <meta property="og:title" content="دانلود اپلیکیشن مووینو | سینما در دستان تو">
+  <meta property="og:description" content="مرجع رسمی دانلود نسخه‌های پایدار اپلیکیشن مووینو برای موبایل، تلویزیون هوشمند، ویندوز و وب.">
+  <meta property="og:image" content="assets/movino-icon.png">
+  <meta property="og:type" content="website">
+  <title>دانلود اپلیکیشن مووینو | Movino Downloads Portal</title>
+
+  <link rel="icon" type="image/png" href="assets/movino-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Modular Scripts -->
+  <script defer src="assets/js/i18n.js"></script>
+  <script defer src="assets/js/qrcode.js"></script>
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <main>
-    <header>
-      <img src="assets/movino-icon.png" alt="لوگوی مووینو">
-      <h1>مووینو</h1>
-      <p class="intro">نسخهٔ مناسب دستگاهت را انتخاب کن. برای بررسی فایل‌ها و نسخه‌های دیگر، صفحهٔ انتشار را ببین.</p>
-      <span class="version" id="version">نسخهٔ پایدار</span>
+  <div class="container">
+    <!-- Header -->
+    <header class="site-header">
+      <a href="#" class="brand-wrap">
+        <img src="assets/movino-icon.png" alt="لوگوی مووینو" class="brand-logo">
+        <div class="brand-text">
+          <strong data-i18n="brand_title">مووینو</strong>
+          <small data-i18n="brand_sub">مرکز دانلود اپلیکیشن</small>
+        </div>
+      </a>
+
+      <div class="header-tools">
+        <!-- Language Switcher -->
+        <div class="lang-selector" role="group" aria-label="انتخاب زبان / Language">
+          <button type="button" class="lang-btn is-active" data-lang="fa">فا</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="ar">عر</button>
+        </div>
+
+        <!-- Share Button (Web Share API) -->
+        <button type="button" class="btn-header-action btn-share-trigger" aria-label="اشتراک‌گذاری / Share">
+          <span>🗣️</span>
+          <span data-i18n="btn_share">ارسال به دوستان</span>
+        </button>
+
+        <!-- Telegram Quick Button -->
+        <a href="https://t.me/MovinoOfficial" target="_blank" rel="noopener noreferrer" class="btn-header-action" style="color:#60a5fa; border-color:rgba(41,151,255,0.3)">
+          <span>📢</span>
+          <span>تلگرام</span>
+        </a>
+      </div>
     </header>
 
-    <div class="grid">
-      <section>
-        <h2>اندروید ۶۴ بیتی</h2>
-        <p>برای بیشتر گوشی‌ها و تبلت‌های اندرویدی جدید.</p>
-        <a class="button" data-asset="arm64" href="https://github.com/Movino/movino-downloads/releases/latest">دانلود APK ARM64</a>
+    <!-- Hero Section -->
+    <main>
+      <section class="hero">
+        <div class="hero-meta-row">
+          <div class="version-pill">
+            <span class="pulse-dot"></span>
+            <span id="version-tag" data-i18n="badge_stable">نسخهٔ پایدار و رسمی</span>
+          </div>
+
+          <!-- Changelog Modal Trigger -->
+          <button type="button" class="btn-changelog-trigger" id="btn-open-changelog">
+            <span data-i18n="btn_changelog">📜 تغییرات این نسخه</span>
+          </button>
+        </div>
+
+        <h1>
+          <span data-i18n="hero_title_1">سینما در دستان تو،</span><br>
+          <span class="gradient-text" data-i18n="hero_title_2">در هر زمان و هر دستگاه</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_desc">
+          دریافت مستقیم و پرسرعت اپلیکیشن مووینو برای تمام گوشی‌ها، تلویزیون‌های هوشمند، تبلت و کامپیوتر بدون نیاز به فیلترشکن و با ترافیک نیم‌بها.
+        </p>
+
+        <!-- Dynamic Smart Device Recommendation Box -->
+        <div class="hero-recommend-box">
+          <span class="rec-badge" data-i18n="rec_badge">⚡ پیشنهاد هوشمند برای دستگاه شما</span>
+          <h2 class="rec-title" id="rec-device-title" data-i18n="rec_title">دانلود مستقیم مووینو برای گوشی اندروید</h2>
+          <p class="rec-meta" data-i18n="rec_meta">نسخه استاندارد و پایدار · بدون قطعی و کاملاً تست‌شده</p>
+
+          <a href="https://github.com/Movino/movino-downloads/releases/latest" id="btn-hero-download" class="btn-primary-download">
+            <span data-i18n="rec_btn">📥 دریافت مستقیم فایل نصبی</span>
+          </a>
+
+          <div class="rec-mirrors">
+            <span>میرورهای کمکی:</span>
+            <a href="https://t.me/MovinoOfficial" target="_blank" rel="noopener noreferrer" data-i18n="rec_mirror_tg">دانلود کمکی از تلگرام</a>
+            <span>•</span>
+            <a href="https://github.com/Movino/movino-downloads/releases/latest" id="link-all-releases" target="_blank" rel="noopener noreferrer" data-i18n="rec_mirror_gh">دانلود مستقیم از گیت‌هاب</a>
+          </div>
+        </div>
       </section>
+
+      <!-- Platforms Grid -->
       <section>
-        <h2>اندروید ۳۲ بیتی</h2>
-        <p>برای دستگاه‌های قدیمی‌تر با پردازندهٔ ARMv7.</p>
-        <a class="button secondary" data-asset="armv7" href="https://github.com/Movino/movino-downloads/releases/latest">دانلود APK ARMv7</a>
+        <h2 class="section-title" data-i18n="grid_title">انتخاب بر اساس پلتفرم</h2>
+        <p class="section-desc" data-i18n="grid_desc">نسخهٔ متناسب با سیستم‌عامل دستگاهت رو انتخاب کن:</p>
+
+        <div class="platform-grid">
+          <!-- Android Phone -->
+          <article class="platform-card" data-platform="android">
+            <div>
+              <div class="card-top">
+                <div class="platform-icon icon-android">📱</div>
+                <div class="card-heading">
+                  <h3 data-i18n="card_android_title">اندروید (موبایل و تبلت)</h3>
+                  <span class="card-tag" data-i18n="card_android_tag">گوشی‌های هوشمند</span>
+                </div>
+              </div>
+              <p class="card-desc" data-i18n="card_android_desc">
+                نسخه استاندارد سازگار با انواع گوشی‌های شیائومی، سامسونگ، هواوی و تمامی دستگاه‌های اندروید ۵ به بالا.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn-card highlight" data-asset="universal" href="https://github.com/Movino/movino-downloads/releases/latest" data-i18n="btn_android_dl">
+                دانلود APK مستقیم
+              </a>
+              <div class="card-sublinks">
+                <span class="asset-size">~45 MB</span>
+                <a href="#advanced-architectures">معماری‌های خاص ↓</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Android TV -->
+          <article class="platform-card" data-platform="tv">
+            <div>
+              <div class="card-top">
+                <div class="platform-icon icon-tv">📺</div>
+                <div class="card-heading">
+                  <h3 data-i18n="card_tv_title">تلویزیون هوشمند (Android TV)</h3>
+                  <span class="card-tag" data-i18n="card_tv_tag">Android TV & Box</span>
+                </div>
+              </div>
+              <p class="card-desc" data-i18n="card_tv_desc">
+                طراحی ویژه جهت ناوبری آسان با ریموت‌کنترل تلویزیون، اندروید باکس‌ها، Mi Box و سونی/تی‌سی‌ال.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn-card" data-asset="tv" href="https://github.com/Movino/movino-downloads/releases/latest" data-i18n="btn_tv_dl">
+                دانلود APK تلویزیون
+              </a>
+              <!-- TV Downloader Link Helper -->
+              <button type="button" class="btn-copy-tv" id="btn-copy-tv-link">
+                <span data-i18n="btn_copy_tv_link">📋 کپی لینک مستقیم برای Downloader</span>
+              </button>
+              <div class="card-sublinks">
+                <span class="asset-size">~42 MB</span>
+                <span>پشتیبانی از D-Pad ریموت</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Windows Desktop -->
+          <article class="platform-card" data-platform="windows">
+            <div>
+              <div class="card-top">
+                <div class="platform-icon icon-windows">💻</div>
+                <div class="card-heading">
+                  <h3 data-i18n="card_win_title">ویندوز (Desktop)</h3>
+                  <span class="card-tag" data-i18n="card_win_tag">Windows 10 / 11</span>
+                </div>
+              </div>
+              <p class="card-desc" data-i18n="card_win_desc">
+                تماشای فیلم‌ها روی لپ‌تاپ و کامپیوتر شخصی با کیفیت فوق‌العاده و پلیر پیشرفته ویندوز.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn-card" data-asset="windows" href="https://github.com/Movino/movino-downloads/releases/latest" data-i18n="btn_win_dl">
+                دانلود نسخه ویندوز
+              </a>
+              <div class="card-sublinks">
+                <span>نسخه ۶۴ بیتی</span>
+                <span>فایل نصبی مستقیم</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Web App / iOS -->
+          <article class="platform-card" data-platform="web">
+            <div>
+              <div class="card-top">
+                <div class="platform-icon icon-web">🌐</div>
+                <div class="card-heading">
+                  <h3 data-i18n="card_web_title">نسخه وب و آیفون (PWA)</h3>
+                  <span class="card-tag" data-i18n="card_web_tag">iOS & مرورگر</span>
+                </div>
+              </div>
+              <p class="card-desc" data-i18n="card_web_desc">
+                پخش سریع و آنلاین بدون نیاز به نصب فایل روی آیفون، مک و تمامی سیستم‌عامل‌ها از طریق مرورگر.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn-card" href="https://t.me/MovinoBot/app" target="_blank" rel="noopener noreferrer" data-i18n="btn_web_open">
+                ورود به وب‌پلیر
+              </a>
+              <div class="card-sublinks">
+                <span>بدون اشغال حافظه</span>
+                <span>پشتیبانی کامل Safari & Chrome</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Linux Desktop -->
+          <article class="platform-card" data-platform="linux">
+            <div>
+              <div class="card-top">
+                <div class="platform-icon icon-linux">🐧</div>
+                <div class="card-heading">
+                  <h3 data-i18n="card_linux_title">لینوکس (Linux)</h3>
+                  <span class="card-tag" data-i18n="card_linux_tag">AppImage & Deb</span>
+                </div>
+              </div>
+              <p class="card-desc" data-i18n="card_linux_desc">
+                بستهٔ مستقل AppImage قابل اجرا روی توزیع‌های مختلف اوبونتو، فدورا، دبیان و آرچ‌لینوکس.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn-card" data-asset="appimage" href="https://github.com/Movino/movino-downloads/releases/latest" data-i18n="btn_linux_dl">
+                دانلود AppImage
+              </a>
+              <div class="card-sublinks">
+                <span>x86_64</span>
+                <a data-asset="deb" href="https://github.com/Movino/movino-downloads/releases/latest">بسته Deb</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
+
+      <!-- UI Showcase Section -->
+      <section class="showcase-section">
+        <h2 class="section-title" data-i18n="showcase_title">نمای محیط اپلیکیشن در تلویزیون و موبایل</h2>
+        <p class="section-desc" data-i18n="showcase_desc">طراحی اختصاصی شبانه، رابط کاربری روان و بهینه‌سازی‌شده برای انواع صفحه‌نمایش‌ها</p>
+
+        <!-- TV Showcase Featured Card -->
+        <div class="showcase-tv-card">
+          <div class="showcase-tv-media">
+            <img src="assets/images/tv-showcase.webp" alt="محیط اختصاصی تلویزیون هوشمند مووینو" loading="lazy">
+          </div>
+          <div class="showcase-caption">
+            <div class="showcase-badge" data-i18n="showcase_tv_badge">📺 ویژه تلویزیون هوشمند (Android TV & TV Box)</div>
+            <h3 data-i18n="showcase_tv_title">محیط اختصاصی تلویزیون با ریموت‌کنترل</h3>
+            <p data-i18n="showcase_tv_sub">پیمایش آسان با D-Pad ریموت، اسلایدر هیرو با کاورهای سینمایی واقعی، پخش روان 4K و چیدمان مناسب صفحه بزرگ.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Showcase 2-Card Row -->
+        <div class="showcase-mobile-grid">
+          <div class="showcase-mobile-card">
+            <div class="phone-mockup-frame">
+              <img src="assets/images/mobile-home.webp" alt="صفحه اصلی اپلیکیشن موبایل مووینو" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              <div class="showcase-badge" data-i18n="showcase_mob_home_badge">📱 نسخه موبایل (Android)</div>
+              <h3 data-i18n="showcase_mob_home_title">صفحه اصلی و کاوش فیلم‌ها</h3>
+              <p data-i18n="showcase_mob_home_sub">طراحی مدرن با دسترسی تک‌دستی، جستجوی بلادرنگ، نوار ناوبری شیشه‌ای و دسترسی سریع به تازه‌ترین فیلم‌ها.</p>
+            </div>
+          </div>
+
+          <div class="showcase-mobile-card">
+            <div class="phone-mockup-frame">
+              <img src="assets/images/mobile-details.webp" alt="صفحه اختصاصی فیلم و پخش در موبایل" loading="lazy">
+            </div>
+            <div class="showcase-caption">
+              <div class="showcase-badge" data-i18n="showcase_mob_details_badge">🎬 صفحه فیلم و دانلود</div>
+              <h3 data-i18n="showcase_mob_details_title">صفحه اختصاصی فیلم و انتخاب کیفیت</h3>
+              <p data-i18n="showcase_mob_details_sub">مشاهده مشخصات کامل، عوامل، نمرات IMDb، پخش آنلاین با زیرنویس فارسی یا دانلود کیفیت‌های مختلف 1080p و 720p.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-Step Installation Guide -->
+      <section class="install-guide-section">
+        <h2 class="section-title" data-i18n="guide_title">راهنمای ۳ مرحله‌ای نصب فایل APK</h2>
+        <p class="section-desc" data-i18n="guide_desc">نصب آسان و بدون ابهام روی تمامی گوشی‌ها و تبلت‌های اندرویدی:</p>
+
+        <div class="guide-steps-grid">
+          <div class="guide-step-card">
+            <span class="step-num-badge">۱</span>
+            <h3 data-i18n="guide_step1_title">۱. دانلود و لمس باز کردن (Open)</h3>
+            <p data-i18n="guide_step1_desc">پس از اتمام دانلود فایل APK، اعلان را لمس کرده یا از پوشه Downloads فایل را اجرا کنید.</p>
+          </div>
+
+          <div class="guide-step-card">
+            <span class="step-num-badge">۲</span>
+            <h3 data-i18n="guide_step2_title">۲. انتخاب More details در صورت اخطار</h3>
+            <p data-i18n="guide_step2_desc">اگر پیام Google Play Protect نمایش داده شد، روی گزینه <code>More details</code> (جزئیات بیشتر) بزنید.</p>
+          </div>
+
+          <div class="guide-step-card">
+            <span class="step-num-badge">۳</span>
+            <h3 data-i18n="guide_step3_title">۳. لمس Install anyway و لذت از فیلم‌ها!</h3>
+            <p data-i18n="guide_step3_desc">دکمه <code>Install anyway</code> (نصب در هر صورت) را لمس کنید تا برنامه در چند ثانیه نصب و فعال شود.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Architectures Accordion -->
+      <section class="accordion-section" id="advanced-architectures">
+        <button type="button" class="accordion-trigger" id="accordion-arch-trigger" aria-expanded="false" aria-controls="accordion-arch-content">
+          <span data-i18n="accordion_arch_title">سایر پردازنده‌ها و بسته‌های تخصصی (پیشرفته)</span>
+          <span class="trigger-icon">▼</span>
+        </button>
+        <div class="accordion-content" id="accordion-arch-content">
+          <table class="advanced-table">
+            <thead>
+              <tr>
+                <th data-i18n="th_file">نام پکیج</th>
+                <th data-i18n="th_arch">معماری پردازنده</th>
+                <th data-i18n="th_use">کاربرد</th>
+                <th data-i18n="th_dl">دانلود</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>app-arm64-v8a-release.apk</code></td>
+                <td>ARM64 (v8a)</td>
+                <td data-i18n="arm64_desc">گوشی‌های مدرن و جدید</td>
+                <td><a data-asset="arm64" href="https://github.com/Movino/movino-downloads/releases/latest" style="color:var(--neon-cyan)">دریافت</a></td>
+              </tr>
+              <tr>
+                <td><code>app-armeabi-v7a-release.apk</code></td>
+                <td>ARMv7 (32-bit)</td>
+                <td data-i18n="armv7_desc">گوشی‌ها و تبلت‌های قدیمی‌تر</td>
+                <td><a data-asset="armv7" href="https://github.com/Movino/movino-downloads/releases/latest" style="color:var(--neon-cyan)">دریافت</a></td>
+              </tr>
+              <tr>
+                <td><code>app-release.aab</code></td>
+                <td>Android App Bundle</td>
+                <td data-i18n="aab_desc">بسته انتشار مخصوص گوگل‌پلی و استورها</td>
+                <td><a data-asset="aab" href="https://github.com/Movino/movino-downloads/releases/latest" style="color:var(--neon-cyan)">دریافت</a></td>
+              </tr>
+              <tr>
+                <td><code>checksums.txt</code></td>
+                <td>SHA-256</td>
+                <td data-i18n="chk_desc">کدهای اعتبارسنجی سلامت فایل‌ها</td>
+                <td><a data-asset="checksums" href="https://github.com/Movino/movino-downloads/releases/latest" style="color:var(--neon-cyan)">مشاهده</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Features Highlights -->
       <section>
-        <h2>Android TV</h2>
-        <p>نسخهٔ مخصوص تلویزیون و کنترل با ریموت.</p>
-        <a class="button secondary" data-asset="tv" href="https://github.com/Movino/movino-downloads/releases/latest">دانلود APK تلویزیون</a>
+        <h2 class="section-title" data-i18n="features_title">چرا اپلیکیشن مووینو؟</h2>
+        <div class="features-grid">
+          <div class="feature-box">
+            <span class="feature-icon">🚀</span>
+            <h3 class="feature-title" data-i18n="feat_traffic_title">ترافیک نیم‌بها داخلی</h3>
+            <p class="feature-desc" data-i18n="feat_traffic_desc">محاسبه حجم مصرفی اینترنت به صورت نیم‌بها روی تمامی اپراتورهای همراه و خانگی.</p>
+          </div>
+          <div class="feature-box">
+            <span class="feature-icon">📺</span>
+            <h3 class="feature-title" data-i18n="feat_tv_title">اتصال سریع به تلویزیون</h3>
+            <p class="feature-desc" data-i18n="feat_tv_desc">امکان Pair کردن و پخش بدون دردسر فیلم‌ها با کد ۵ رقمی بین گوشی و تلویزیون خانه.</p>
+          </div>
+          <div class="feature-box">
+            <span class="feature-icon">🎬</span>
+            <h3 class="feature-title" data-i18n="feat_archive_title">آرشیو جامع دو زبانه</h3>
+            <p class="feature-desc" data-i18n="feat_archive_desc">دوبله اختصاصی، صوت‌های چندزبانه و زیرنویس فارسی هماهنگ و بدون سانسور.</p>
+          </div>
+          <div class="feature-box">
+            <span class="feature-icon">⚡</span>
+            <h3 class="feature-title" data-i18n="feat_speed_title">بدون نیاز به فیلترشکن</h3>
+            <p class="feature-desc" data-i18n="feat_speed_desc">پخش روان و پرسرعت بر بستر سرورهای ابری قدرتمند بدون قطعی و افت کیفیت.</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>لینوکس</h2>
-        <p>بستهٔ Debian یا AppImage برای سیستم‌های x86_64.</p>
-        <a class="button secondary" data-asset="appimage" href="https://github.com/Movino/movino-downloads/releases/latest">دانلود AppImage</a>
+
+      <!-- QR Code for Mobile Scanning (Visible on Desktop) -->
+      <section class="qr-container-card" id="qr-card">
+        <div class="qr-info">
+          <h3 data-i18n="qr_title">دانلود مستقیم روی گوشی از طریق اسکن QR</h3>
+          <p data-i18n="qr_desc">
+            اگر با کامپیوتر یا لپ‌تاپ این صفحه را مشاهده می‌کنید، دوربین گوشی خود را مقابل این کد بگیرید تا مستقیماً به لینک دانلود متصل شوید.
+          </p>
+        </div>
+        <div class="qr-code-box" id="qr-target">
+          <!-- Populated by qrcode.js -->
+        </div>
       </section>
-      <section>
-        <h2>همهٔ فایل‌های نسخه</h2>
-        <p>نسخهٔ یونیورسال، AAB و checksumها را هم از صفحهٔ انتشار دریافت کن.</p>
-        <a class="button secondary" id="all-releases" href="https://github.com/Movino/movino-downloads/releases/latest">مشاهدهٔ Releases</a>
+
+      <!-- FAQs -->
+      <section class="faq-wrap">
+        <h2 class="section-title" data-i18n="faq_title">سوالات متداول کاربران</h2>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq_q1">کدام نسخه اندروید را برای گوشی خود دانلود کنم؟</span>
+            <span>▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a1">اگر گوشی شما تولید سال ۲۰۱۷ به بعد است، نسخه استاندارد یا ARM64 بهترین کارایی را دارد. در صورتی که در نصب به مشکل خوردید، نسخه ARMv7 سازگار با تمام دستگاه‌هاست.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq_q2">چگونه مووینو را روی تلویزیون هوشمند نصب کنم؟</span>
+            <span>▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a2">فایل APK تلویزیون را دانلود کرده و روی فلش مموری بریزید یا از طریق اپلیکیشن Send Files to TV از روی گوشی به تلویزیون بفرستید و نصب نمایید.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq_q3">هنگام نصب هشدار Google Play Protect یا برنامه ناشناس نمایش داده می‌شود، چه کنم؟</span>
+            <span>▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a3">به دلیل اینکه برنامه مستقیماً از سایت و بدون واسطه گوگل‌پلی دانلود می‌شود این هشدار عادی است. کافیست روی More details و سپس Install anyway بزنید.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq_q4">آیا برای تماشای فیلم‌ها نیاز به فیلترشکن است؟</span>
+            <span>▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a4">خیر، تمامی سرورهای مووینو در دیتاسنترهای داخلی و پرسرعت میزبانی می‌شوند و بدون نیاز به هیچ ابزار دورزدن تحریم به سادگی و با ترافیک نیم‌بها پخش می‌شوند.</p>
+          </div>
+        </div>
       </section>
+
+      <!-- Telegram Community Banner -->
+      <section class="telegram-banner">
+        <h3 data-i18n="tg_banner_title">به خانواده بزرگ مووینو در تلگرام بپیوندید</h3>
+        <p data-i18n="tg_banner_desc">
+          اطلاع از پخش فیلم‌ها و قسمت‌های جدید سریال‌ها، دریافت لینک‌های مستقیم در ربات و ارتباط با پشتیبانی ۲۴ ساعته.
+        </p>
+        <div class="tg-actions">
+          <a href="https://t.me/MovinoOfficial" target="_blank" rel="noopener noreferrer" class="btn-tg-action" data-i18n="tg_btn_channel">
+            📢 کانال رسمی تلگرام
+          </a>
+          <a href="https://t.me/MovinoBot" target="_blank" rel="noopener noreferrer" class="btn-tg-outline" data-i18n="tg_btn_bot">
+            🤖 ربات اختصاصی مووینو
+          </a>
+          <button type="button" class="btn-tg-outline btn-share-trigger" data-i18n="btn_share">
+            🗣️ ارسال لینک به دوستان
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Changelog Modal -->
+    <div class="modal-overlay" id="changelog-modal" role="dialog" aria-modal="true" aria-labelledby="changelog-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="changelog-modal-title" data-i18n="changelog_title">تغییرات آخرین نسخه مووینو</h3>
+          <button type="button" class="btn-modal-close" id="btn-close-changelog" aria-label="بستن">✕</button>
+        </div>
+        <div class="modal-body" id="changelog-content">
+          <p style="color:var(--text-muted);" data-i18n="changelog_loading">در حال دریافت تغییرات از گیت‌هاب...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-card" id="btn-footer-close-changelog" data-i18n="changelog_close" style="padding:6px 18px; font-size:0.88rem;">بستن</button>
+        </div>
+      </div>
     </div>
 
-    <p class="note">فایل AAB برای انتشار در فروشگاه‌هاست و نصب مستقیم روی گوشی نیست. checksum هر نسخه در فایل <code>checksums.txt</code> همان Release قرار می‌گیرد.</p>
-    <footer>مووینو · <a href="https://github.com/Movino/movino-downloads">صفحهٔ گیت‌هاب</a></footer>
-  </main>
-  <script>
-    const repo = 'Movino/movino-downloads';
-    const releasePage = `https://github.com/${repo}/releases/latest`;
-    fetch(`https://api.github.com/repos/${repo}/releases/latest`)
-      .then(response => response.ok ? response.json() : Promise.reject())
-      .then(release => {
-        document.getElementById('version').textContent = release.tag_name || 'نسخهٔ پایدار';
-        const assets = release.assets || [];
-        const rules = {
-          arm64: /arm64-v8a\.apk$/i,
-          armv7: /armeabi-v7a\.apk$/i,
-          tv: /Android-TV\.apk$/i,
-          appimage: /\.AppImage$/i,
-        };
-        for (const [key, pattern] of Object.entries(rules)) {
-          const asset = assets.find(item => pattern.test(item.name));
-          const link = document.querySelector(`[data-asset="${key}"]`);
-          if (asset && link) link.href = asset.browser_download_url;
-        }
-        document.getElementById('all-releases').href = release.html_url || releasePage;
-      })
-      .catch(() => {});
-  </script>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p data-i18n="footer_copy">مووینو (Movino) · کلیه حقوق برای شبکهٔ اختصاصی مووینو محفوظ است.</p>
+      <div class="footer-meta">
+        <a href="https://github.com/Movino/movino-downloads" target="_blank" rel="noopener noreferrer" data-i18n="footer_gh">سورس مخزن دانلود در گیت‌هاب</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
